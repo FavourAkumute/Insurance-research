@@ -1,0 +1,51 @@
+<form action="{{ url_for('predict')}}" method="post"> 
+    <p>Gender:</p>
+     <label><input type="radio" name="female" value="1" required="required" 		/>Female</label>
+        <label><input type="radio" name="female" value="0" required="required" 		/>Male</label><br>
+    <p>Client's age:</p>
+     <input type="number" name="age" placeholder="Enter age" 			  		required="required" /><br>  
+    <p>Rate health satisfaction from 1 - 10:</p>
+     <input type="number" name="hsat" placeholder="Enter rate" 			  		required="required" /><br>
+    <p>Is there any handicapped person in their family?</p>
+     <label><input type="radio" name="handicapped" value="1" required="required" 		/>Yes</label>
+        <label><input type="radio" name="handicapped" value="0" required="required" 		/>No</label>
+    <p>What is the percentage of handicap from 1 - 100?</p>
+     <input type="number" name="degree_of_handicap" placeholder="Enter the percentage" 			  		required="required" /><br>
+    <p>How many kids are in their family?</p>
+     <input type="number" name="have_kids" placeholder="No. of kids" 			  		required="required" /><br> 
+    <p>Years of education:</p>
+     <input type="number" name="years_of_educ" placeholder="Enter years" 			  		required="required" /><br> 
+    <p>Marital status:</p>
+     <label><input type="radio" name="marital_status" value="1" required="required" 		/>Married</label>
+        <label><input type="radio" name="marital_status" value="0" required="required" 		/>Otherwise</label><br>
+    <p>Is their highest degree a polytechnic degree?</p>
+     <label><input type="radio" name="polyd" value="1" required="required" 		/>Yes</label>
+        <label><input type="radio" name="polyd" value="0" required="required" 		/>No</label><br>
+    <p>Is their highest degree a university degree?</p>
+     <label><input type="radio" name="univ" value="1" required="required" 		/>Yes</label>
+        <label><input type="radio" name="univ" value="0" required="required" 		/>No</label><br>
+    <p>Is the client working?</p>
+     <label><input type="radio" name="working" value="1" required="required" 		/>Yes</label>
+        <label><input type="radio" name="working" value="0" required="required" 		/>No</label><br>  
+    <p>Is it a blue collar job?</p>
+     <label><input type="radio" name="bluec" value="1" required="required" 		/>Yes</label>
+        <label><input type="radio" name="bluec" value="0" required="required" 		/>No</label><br>
+    <p>Is it a white collar job?</p>
+     <label><input type="radio" name="whitec" value="1" required="required" 		/>Yes</label>
+        <label><input type="radio" name="whitec" value="0" required="required" 		/>No</label><br>
+    <p>Are they self employed?</p>
+     <label><input type="radio" name="self" value="1" required="required" 		/>Yes</label>
+        <label><input type="radio" name="self" value="0" required="required" 		/>No</label><br>    
+    <p>Is the client a civil servant?</p>
+     <label><input type="radio" name="civil" value="1" required="required" 		/>Yes</label>
+        <label><input type="radio" name="civil" value="0" required="required" 		/>No</label><br>
+    <p>How many times have they visited a doctor in the last three months?</p>
+        <input type="number" name="docvis" placeholder="No. of visits" 			  		required="required" /><br>     
+    <p>How many times have they visited the hospital in the past year?</p>
+        <input type="number" name="hospvis" placeholder="No. of visits" 			  		required="required" /><br>
+    <p>What is the annual income of the client's household?</p>
+        <input type="number" name="income" placeholder="Enter amount" 			  		required="required" /><br><br>        
+    
+    <button type="submit">Predict</button>
+</form>
+<p> {{prediction }} </p>
