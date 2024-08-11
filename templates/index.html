@@ -3,12 +3,12 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Insurance Research</title>
+		<title>Insurance customer potential form</title>
 		<link rel="stylesheet" href="../static/style.css" />
 	</head>
 	<body>
 		<form action="{{ url_for('predict')}}" method="post">
-			<h2>Insurance Research</h2>
+			<h2>insurance customer potential form</h2>
 
 			<div class="form-group">
 				<p>Gender:</p>
@@ -313,6 +313,18 @@
 					placeholder="Enter amount"
 					required="required"
 				/>
+
+				<div
+					style="
+						margin-top: 20px;
+						margin-bottom: 20px;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+					"
+				>
+					Add predictions here
+				</div>
 			</div>
 
 			<button type="submit">Predict</button>
